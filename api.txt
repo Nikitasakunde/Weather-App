@@ -1,0 +1,23 @@
+// Get and format current time
+	function getCurrentTime() {
+		var now = new Date();
+		var hours = now.getHours();
+		var mins = now.getMinutes();
+		var period = 'am';
+		if (hours > 11) {
+			period = 'pm';
+				if (hours > 12) hours -= 12; //format for 12-hr clock
+		}
+		if (mins < 10){
+			mins = '0' + mins; //format minutes
+		}
+		return hours + ':' + mins + period;
+	}
+
+
+
+80e8cbead53ed48dc68c1a0d429a6e44
+
+
+
+https://api.openweathermap.org/data/2.5/weather?q=Pune&appid=80e8cbead53ed48dc68c1a0d429a6e44
